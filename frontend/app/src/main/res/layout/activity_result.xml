@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Hello.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Status header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/statusCircle"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:background="@drawable/bg_status_circle_success">
+
+                            <ImageView
+                                android:id="@+id/statusIcon"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_status_large" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/titleText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:gravity="center"
+                            android:textAppearance="@style/TextAppearance.Hello.Title"
+                            android:textColor="@color/success"
+                            android:textSize="20sp"
+                            tools:text="พบเลขที่ อย." />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/outline" />
+
+                    <!-- FDA number -->
+                    <TextView
+                        style="@style/TextAppearance.Hello.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="เลขที่ อย." />
+
+                    <TextView
+                        android:id="@+id/fdaText"
+                        style="@style/TextAppearance.Hello.Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="22sp"
+                        tools:text="12-3-45678-9-0123" />
+
+                    <!-- Product name -->
+                    <TextView
+                        style="@style/TextAppearance.Hello.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="ชื่อผลิตภัณฑ์" />
+
+                    <TextView
+                        android:id="@+id/pdnameText"
+                        style="@style/TextAppearance.Hello.Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="ผลิตภัณฑ์ตัวอย่าง" />
+
+                    <!-- Company -->
+                    <TextView
+                        style="@style/TextAppearance.Hello.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="บริษัทผู้ผลิต" />
+
+                    <TextView
+                        android:id="@+id/companyText"
+                        style="@style/TextAppearance.Hello.Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="บริษัท ตัวอย่าง จำกัด" />
+
+                    <!-- Product type -->
+                    <TextView
+                        style="@style/TextAppearance.Hello.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="ประเภทผลิตภัณฑ์" />
+
+                    <TextView
+                        android:id="@+id/typeText"
+                        style="@style/TextAppearance.Hello.Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="เครื่องสำอาง" />
+
+                    <!-- Address -->
+                    <TextView
+                        style="@style/TextAppearance.Hello.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="ที่อยู่ที่ผลิต" />
+
+                    <TextView
+                        android:id="@+id/addressText"
+                        style="@style/TextAppearance.Hello.Value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="123 ถนนตัวอย่าง แขวงตัวอย่าง เขตตัวอย่าง กรุงเทพฯ" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/outline" />
+
+                    <!-- Verification status -->
+                    <TextView
+                        style="@style/TextAppearance.Hello.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="สถานะการตรวจสอบ" />
+
+                    <TextView
+                        android:id="@+id/validText"
+                        style="@style/TextAppearance.Hello.Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/success"
+                        tools:text="ถูกต้อง" />
+
+                    <!-- Message -->
+                    <TextView
+                        style="@style/TextAppearance.Hello.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="รายละเอียด" />
+
+                    <TextView
+                        android:id="@+id/messageText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="15sp"
+                        tools:text="ข้อมูลตรงกับฐานข้อมูล อย." />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        style="@style/Widget.Hello.Button.Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="กลับหน้าหลัก"
+        app:icon="@drawable/ic_arrow_back" />
+
+</LinearLayout>
